@@ -14,8 +14,8 @@
             <div><a class="nav_links" href="#Accueil">Accueil</a></div>
             <i class="fa-solid fa-bars"></i>
             <ul class="liste_navbar">
-                <li><a class="nav_links" href="#git">Profil</a></li>
-                <li><a class="nav_links" href="#comp">Compétences</a></li>
+                <li class="test"><a class="nav_links" href="#git">Profil</a></li>
+                <li class="test"><a class="nav_links" href="#comp">Compétences</a></li>
                 <li>Me contacter</li>
             </ul>
         </nav>

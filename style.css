@@ -4,12 +4,14 @@
   font-family: "Zen Dots";
 }
 
+/* Mise en forme de la page entière via display grid */
 body {
   height: 500vh;
   display: grid;
   grid-template-rows: 5vh 100vh 65vh 65vh;
 }
 
+/* Mise en forme de la barre de navigation */
 nav {
   display: flex;
   height: 5vh;
@@ -21,10 +23,12 @@ nav {
   font-size: medium;
 }
 
+/* Uniquement pour média quéry */
 nav > .fa-bars {
   display: none;
 }
 
+/* Mise en forme éléments de la barre de navigation */
 nav > .liste_navbar {
   display: flex;
   list-style: none;
@@ -34,35 +38,43 @@ nav > .liste_navbar {
   padding-inline-start: 40vh;
 }
 
+/* Changement couleur nav éléments on hover */
 .nav_links:hover {
   color: cornflowerblue;
   background-color: black;
 }
 
+/* Pas de design sur la liste <li> */
 .nav_links {
   color: black;
   text-decoration: none;
 }
 
+/* Mise en forme de la page d'introduction */
 #intro {
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url(/images/35015620.webp);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+/* Texte centré */
 #intro > #texte_centre {
   font-size: 55px;
   width: 50%;
-  color: aliceblue;
+  color: salmon;
 }
 
+/* Police de la section Profil/Git */
 #git {
   font-size: small;
   background-color: skyblue;
 }
 
+/* Mise en forme texte section Profil/Git */
 #git > p {
   padding-top: 5vh;
   display: flex;
@@ -70,6 +82,7 @@ nav > .liste_navbar {
   justify-content: center;
 }
 
+/* Mise en forme des "disquettes" sur la section Profil/Git */
 #projets_git {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -78,6 +91,7 @@ nav > .liste_navbar {
   padding-top: 5vh;
 }
 
+/* Bordure projets git */
 .preview_projects {
   border: 5px solid slategrey;
   border-radius: 8%;
@@ -89,6 +103,7 @@ nav > .liste_navbar {
   align-items: center;
 }
 
+/* Schématisation des languages maîtrisés */
 #comp {
   border-top: 4px dotted;
   font-size: small;
@@ -113,14 +128,15 @@ nav > .liste_navbar {
   width: 100%;
 }
 
+/* Version mobile */
 @media screen and (max-width: 768px) {
   header > nav > .liste_navbar {
     position: fixed;
     background-color: cornflowerblue;
-    height: 90%;
+    height: 100%;
     width: 100%;
     top: 5vh;
-    left: -120vh;
+    left: -150vh;
     justify-content: space-around;
     flex-direction: column;
     padding-inline-start: 0;
@@ -132,18 +148,18 @@ nav > .liste_navbar {
   }
 }
 
+/* Animation pour la barre de navigation */
 @keyframes slide {
   0% {
-    transform: translateX(-120vh);
+    transform: translateX(-150vh);
   }
   100% {
-    transform: translateX(120vh);
+    transform: translateX(150vh);
   }
 }
 
+/* Classe pour faire apparaitre la barre de navigation */
 .appear {
-  animation: slide 3s;
-  /* transform: translateX(100vh);
-  transition-duration: 3s; */
-  /* transition: ease-in-out; */
+  animation: slide 1.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
